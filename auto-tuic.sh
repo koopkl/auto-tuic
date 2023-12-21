@@ -21,7 +21,7 @@ function install_and_run () {
     curl --fail -O https://raw.githubusercontent.com/koopkl/auto-tuic/main/tuic-config.json
     echo "正在生成tuic 配置文件...."
     jq \
-      ".inbounds[0].listen_port=\"${port}\" | \
+      ".inbounds[0].listen_port=${port} | \
       .inbounds[0].tls.server_name=\"${domain}\" | \
       .inbounds[0].tls.acme.domain=\"${domain}\" | \
       .inbounds[0].tls.acme.email=\"${email}\" | \
