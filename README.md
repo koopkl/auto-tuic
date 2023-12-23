@@ -7,3 +7,4 @@ wget https://raw.githubusercontent.com/koopkl/auto-tuic/main/auto-tuic.sh && bas
 ```
 
 安装脚本后只需要按照提示运行即可
+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
