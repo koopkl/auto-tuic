@@ -8,7 +8,7 @@ function install_and_run () {
     bash <(curl -fsSL https://sing-box.app/deb-install.sh)
     echo "sing-box安装完成"
     echo "开始安装jq"
-    apt update && apt install -y jq
+    apt update && apt install -y jq gawk uuid-runtime vim
     echo "jq安装成功"
     systemctl enable sing-box
     read -p "请输入您用来申请证书的域名: " domain
