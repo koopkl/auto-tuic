@@ -35,6 +35,7 @@ function install_and_run () {
     systemctl stop sing-box
     echo "运行sing-box"
     systemctl start sing-box
+    init
 }
 
 function uninstall() {
@@ -79,7 +80,7 @@ function gen_shadowrocket_config() {
     \"obfs\" : \"none\",
     \"proto\" : \"bbr\",
     \"password\": "${password}",
-    \"user\": "${uuid}",
+    \"user\": "${uuid}"
   }"
   echo "gen_shadowrocket_config"
 }
