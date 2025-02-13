@@ -1,0 +1,53 @@
+{
+    "log": {
+      "level": "info"
+    },
+    "dns": {
+      "servers": [
+        {
+          "address": "tls://8.8.8.8"
+        }
+      ]
+    },
+    "inbounds": [
+      {
+        "type": "tuic",
+        "listen": "::",
+        "listen_port": 6789,
+        "users": [
+          {
+            "name": "ysd3df93md",
+            "uuid": "",
+            "password": ""
+          }
+        ],
+        "congestion_control": "bbr",
+        "tls": {
+          "enabled": true,
+          "alpn": "h3",
+          "server_name": "domain.example.com",
+            "acme": {
+          "domain": "domain.example.com",
+          "email": "uesername@example.com"
+      }
+        }
+      }
+    ],
+    "outbounds": [
+      {
+        "type": "direct"
+      },
+      {
+        "type": "dns",
+        "tag": "dns-out"
+      }
+    ],
+    "route": {
+      "rules": [
+        {
+          "protocol": "dns",
+          "outbound": "dns-out"
+        }
+      ]
+    }
+  }
