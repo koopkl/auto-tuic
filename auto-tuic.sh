@@ -155,6 +155,8 @@ EOF
 
   echo "Reality安装完成，客户端参数如下："
   show_reality_client_info
+  echo
+  gen_reality_qrcode || true
 }
 
 function uninstall() {
